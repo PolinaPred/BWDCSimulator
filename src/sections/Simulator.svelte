@@ -1,6 +1,14 @@
 <script>
 
     let town = [];
+
+    function handleDrop(event) {
+        const name = event.dataTransfer.getData('text/plain');
+        if(name){
+            addBuilding(name);
+        }
+    }
+
     let stats = {
         population: 1000,
         averageWealth: 20000,
@@ -10,7 +18,7 @@
 
     const buildings = [
         {
-            name: 'school',
+            name: '🏫',
             effect: () => {
                 stats.employmentRate += 0.05;
                 stats.averageWealth += 2000;
@@ -25,13 +33,13 @@
             },
         },
         {
-            name: 'hospital',
+            name: '🏥',
             effect: () => {
                 stats.employmentRate += 0.02;
             },
         },
         {
-            name: 'house',
+            name: '🏘️',
             effect: () => {
                 stats.homeownershipRate += 0.05;
             },
@@ -45,9 +53,13 @@
         },        
     ];
 
-    function addBuilding(building){
-        town.push(building);
-        building.effect();
+    function addBuilding(name){
+        const building = buildings.find(b => b.name === name || b.name.toLowerCase() === name.toLowerCase())
+        if (building){
+            town = [...town, building.name];
+            building.effect();
+            stats = {...stats};
+        }
     }
 </script>
 
@@ -61,9 +73,9 @@
             {#each buildings as building}
             <div
                 class="building"
-                on:click={() => addBuilding(building)}
-                title={building.name}
-            >
+                draggable="true"
+                on:dragstart={(e) => e.dataTransfer.setData('text/plain', building.name)}
+                title={building.name}>
                     {building.name}
             </div>
             {/each}
@@ -76,12 +88,15 @@
             </div>
         </div>
 
-        <div class="town">
+        <div 
+            class="town"
+            on:dragover|preventDefault
+            on:drop={handleDrop}>
             {#if town.length === 0}
                 <div class="empty-town">Add buildings to grow your neighborhood!</div>
                 {/if}
                 {#each town as building}
-                    <div class="building">{building.name}</div>
+                    <div class="building">{building}</div>
                 {/each}
         </div>
     </div>
