@@ -10,47 +10,62 @@
     }
 
     let stats = {
-        population: 1000,
-        averageWealth: 20000,
-        employmentRate: 0.6,
-        homeownershipRate: 0.4,
+        population: 10,
+        averageWealth: 0,
+        employmentRate: 0,
+        homeownershipRate: 0,
+        govBudget: 1000000,
+        debtConst: 1000,
+        avgDebt: 0,
+        businessMax: 1,
+        bankMultiplier: 1
     };
 
     const buildings = [
         {
             name: '🏫',
             effect: () => {
-                stats.employmentRate += 0.05;
-                stats.averageWealth += 2000;
+                stats.employmentRate += 0.1;
             },
         },
         {
-            name: 'college',
+            name: '🎓',
             effect: () => {
-                stats.employmentRate += 0.1;
-                stats.averageWealth += 5000;
-                stats.homeownershipRate += 0.1;
+                stats.employmentRate += 0.3;
+                stats.businessMax += 3;
+                stats.avgDebt += stats.debtConst * (1+stats.bankMultiplier);
+                stats.bankMultiplier += 0.1;
             },
         },
         {
             name: '🏥',
             effect: () => {
-                stats.employmentRate += 0.02;
+                stats.employmentRate += 0.01;
+                stats.population += 20;
             },
         },
         {
             name: '🏘️',
             effect: () => {
-                stats.homeownershipRate += 0.05;
+                stats.homeownershipRate += 0.02;
+                stats.avgDebt += (stats.debtConst * 0.5 * (1+stats.bankMultiplier));
+                stats.bankMultiplier += 0.05;
             },
         },
         {
-            name: 'office',
+            name: '💼',
             effect: () => {
-                stats.employmentRate += 0.08;
-                stats.averageWealth += 3000;
+                stats.employmentRate += 0.5;
             },
-        },        
+        },
+        {
+            name: '💰',
+            effect: () => {
+                stats.bankMultiplier -= 0.3;
+                stats.homeownershipRate += 0.01;
+
+            }
+        }        
     ];
 
     function addBuilding(name){
