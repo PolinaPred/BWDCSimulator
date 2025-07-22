@@ -59,3 +59,32 @@
   margin-top: 1rem;
   border-radius: 8px;
 }
+
+.tax-slider {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.tax-slider input[type="range"] {
+  width: 100%;
+}
+
+.price {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+}
+
+.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.building-instance {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.building-instance:hover {
+  transform: scale(1.2);
+}
