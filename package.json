@@ -1,9 +1,9 @@
 {
-  "name": "kwk-scrollytelling-template",
+  "name": "BWDCSimulator",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://jasminesamra.github.io/kwk-scrollytelling-template",
+  "homepage": "https://polinapred.github.io/BWDCSimulator",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
