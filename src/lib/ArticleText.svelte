@@ -18,5 +18,6 @@
         border-radius: 20px;
         padding: 20px;
         box-shadow: 16px 16px #ff914d;
+        font-size: 1.2rem;
     }
 </style>

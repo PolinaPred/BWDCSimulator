@@ -24,9 +24,9 @@
         {/snippet}
 
         {#snippet sticky()}
-            <img src="./src/BikeRider.jpg" alt="DJ Jockey Jack Gibson (left) posing for a promotional picture with Ruth Brown (center), and boxing champion Joe Louis (right)" width=800px>
+            <img src="./src/band.jpg" alt="Frank Williams & The Rocketeers" width=800px>
         {/snippet}
-    </Scroller>
+        </Scroller>
 </div>
 
 <style>
@@ -38,5 +38,9 @@
     .gradient-buffer{
     height: 20vh;
     background:linear-gradient(to bottom, #0f0f0f 0%, #C8DFC4 100%);
+  }
+
+  .bike {
+    transform: scaleX(-1);
   }
 </style>

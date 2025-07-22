@@ -18,8 +18,7 @@
     .wrapper {
         background-color: #5a9e4d55;
         padding: min(100vh, 30rem) 1rem;
-        border-style: solid;
-        border-color: #5a9e4d;
+        border: none;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
