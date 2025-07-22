@@ -26,6 +26,7 @@
     const buildings = [
         {
             name: '🏥',
+            id: 'hospital',
             price: 100000 * priceCoefficient,
             effect: () => {
                 stats.employmentRate += 0.01;
@@ -38,6 +39,7 @@
         },
         {
             name: '🏫',
+            id: 'school',
             price: 75000 * priceCoefficient,
             effect: () => {
                 stats.employmentRate += 0.1;
@@ -48,6 +50,7 @@
         },
         {
             name: '🎓',
+            id: 'college',
             price: 180000 * priceCoefficient,
             effect: () => {
                 stats.employmentRate += 0.3;
@@ -64,6 +67,7 @@
         },
         {
             name: '🏘️',
+            id: 'home',
             price: 90000 * priceCoefficient,
             effect: () => {
                 stats.homeownershipRate += 0.02;
@@ -78,6 +82,7 @@
         },
         {
             name: '💼',
+            id: 'business',
             price: 110000 * priceCoefficient,
             effect: () => {
                 stats.employmentRate += 0.4;
@@ -88,6 +93,7 @@
         },
         {
             name: '💰',
+            id: 'bank',
             price: 250000 * priceCoefficient,
             effect: () => {
                 stats.bankMultiplier -= 0.3;
@@ -101,7 +107,7 @@
     ];
 
     function addBuilding(name){
-        const building = buildings.find(b => b.name === name || b.name.toLowerCase() === name.toLowerCase());
+        const building = buildings.find(b => b.name === name || b.id === name);
         
         if (!building) return;
 
@@ -145,6 +151,7 @@
     function removeBuilding(i){
         if(!Array.isArray(town)) town = [];
         const removed = town[i];
+        const base = buildings.find(b => b.name === removed.name || b.id === removed.id);
         if (typeof removed !== 'object' || !removed.name){
             console.warn("Invalid building found in town:", removed);
             town = town.filter((_, index) => index !== i);

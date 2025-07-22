@@ -88,3 +88,7 @@
 .building-instance:hover {
   transform: scale(1.2);
 }
+
+h1 {
+  text-align: center;
+}
