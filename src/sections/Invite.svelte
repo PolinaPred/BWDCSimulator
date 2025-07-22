@@ -6,12 +6,10 @@
       The 1960s brought change
     </h1>
     <p class="intro-text">
-      Unfortunately, for Overtown it was a time not of growth, but of destruction.
-      <br>Federal urban renewal programs and the construction of I-95 and I-395 pierced through the heart of Overtown.
-      <br>Over 20,000 residents were displaced. The community's soul was fractured.
-      <br>From 1960 to 1970, Overtown's population dropped by more than 80%.
-      <br>The built environment was reduced to vacant lots and parking structures.
-      <br>These changes followed patterns repeated across the US as communities nationwide experienced wealth loss, disinvestment, and displacement.
+      Let's pause.
+      <br>You now control a simplified simulation of a town like Overtown.
+      <br>This sandbox is a lens that shows how decisions about housing investment, and public services ripple through time.
+      <br>Try adjusting tax rates, housing prices, and infrastructure to see how small changes can either support a community... or slowly suffocate it.
     </p>
   </div>
 </section>
