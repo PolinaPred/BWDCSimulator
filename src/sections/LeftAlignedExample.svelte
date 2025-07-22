@@ -22,7 +22,7 @@
 
         {#snippet scrolly()}
             <div>
-                <img src="./src/BikeRider.jpg" alt='DJ "Jockey Jack" Gibson (left) posing for a promotional picture with Ruth Brown (center), and boxing champion Joe Louis (right)''>
+                <img src="./src/BikeRider.jpg" alt='DJ Jockey Jack Gibson (left) posing for a promotional picture with Ruth Brown (center), and boxing champion Joe Louis (right)'>
             </div> 
         {/snippet}
     </Scroller>
