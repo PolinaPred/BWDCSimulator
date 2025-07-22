@@ -92,3 +92,9 @@
 h1 {
   text-align: center;
 }
+
+img{
+  border-radius: 2rem;
+  border-color: #ffc845;
+  box-shadow: 16px 16px 0 #ff914d;
+}

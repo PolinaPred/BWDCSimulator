@@ -6,12 +6,6 @@
 <div>
     <Scroller layout="left">
         {#snippet sticky()}
-            <div>
-                <img src="./src/BikeRider.jpg" alt='DJ "Jockey Jack" Gibson (left) posing for a promotional picture with Ruth Brown (center), and boxing champion Joe Louis (right)''>
-            </div> 
-        {/snippet}
-
-        {#snippet scrolly()}
             <ArticleText>
                 In the early 20th century, Overtown was a vibrant, self-sustaining Balck community in Miami. Segregation laws prevented Black residents from living elsewhere, but inside Overtown, culture flourished.
             </ArticleText>
@@ -25,9 +19,11 @@
                 your scrollytelling piece.
             </ArticleText>
         {/snippet}
+
+        {#snippet scrolly()}
+            <div>
+                <img src="./src/BikeRider.jpg" alt='DJ "Jockey Jack" Gibson (left) posing for a promotional picture with Ruth Brown (center), and boxing champion Joe Louis (right)''>
+            </div> 
+        {/snippet}
     </Scroller>
 </div>
-
-<style>
-    
-</style>
