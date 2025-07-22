@@ -13,7 +13,7 @@
                 In the early 20th century, Overtown was a vibrant, self-sustaining Black community in Miami. 
             </ArticleText>
             <ArticleText>
-                Segregation laws prevented Balck residents from living elsewhere, but inside Overtown, culture flourished.
+                Segregation laws prevented Black residents from living elsewhere, but inside Overtown, culture flourished.
             </ArticleText>
             <ArticleText>
                 Churches, jazz clubs, and Black-owned businesses filled the streets. 
