@@ -98,3 +98,7 @@ img{
   border-color: #ffc845;
   box-shadow: 16px 16px 0 #ff914d;
 }
+
+*{
+  margin: 0px;
+}
